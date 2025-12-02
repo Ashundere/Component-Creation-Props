@@ -1,12 +1,11 @@
 import type { ProductDisplayProps } from "../../types";
-import type { Product } from "../../types";
+
 
 export const ProductDisplay: React.FC<ProductDisplayProps> = ({
   product,
   showDescription,
   showStockStatus,
-  onAddToCart,
-  children
+  onAddToCart
 }) => {
   return (
     <div className={"user-profile"}>

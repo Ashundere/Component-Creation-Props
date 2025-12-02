@@ -1,13 +1,12 @@
 import React from 'react';
 import type { UserProfileCardProps } from '../../types';
-import type { User } from '../../types';
+
  
 export const UserProfileCard: React.FC<UserProfileCardProps> = ({
   user,
   showEmail,
   showRole,
-  onEdit,
-  children
+  onEdit
 }) => {
   return (
     <div className={"user-profile"}>
