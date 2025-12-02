@@ -33,6 +33,8 @@ Tailwindcss: https://tailwindcss.com/docs/installation/using-vite
 
 Typescript/React Cheatsheet: https://github.com/typescript-cheatsheets/react
 
+Canvas Lesson 9: React Fundamentals
+
 
 ## Reflection
 
