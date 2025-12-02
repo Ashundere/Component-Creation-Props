@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+# React Component Creation and Props
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+These are a set of Typescript React reusable components 
 
-Currently, two official plugins are available:
+### Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+These reusable components use Typescript, React, and Tailwind.css to display information on the UI.
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Dependencies
+None!
 
-## Expanding the ESLint configuration
+### Authors
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Devon Jones
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Github: [@Ashundere](https://github.com/Ashundere)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Version History
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+0.1
+-Initial Release
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Acknowledgments
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+JS MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+W3Schools: https://www.w3schools.com/
+
+Tailwindcss: https://tailwindcss.com/docs/installation/using-vite
+
+Typescript/React Cheatsheet: https://github.com/typescript-cheatsheets/react
+
+
+## Reflection
+
+### How did you handle optional props in your components?
+I used optional chaining to prevent errors should the function be undefined.
+### What considerations did you make when designing the component interfaces?
+I made sure to add in all items that were needed to ensure that the props would have what they needed.
+### How did you ensure type safety across your components?
+I used typescript interfaces to define the types for each item in the interface, then exported the interface into the modules as needed.
+### What challenges did you face when implementing component composition?
+I had some difficulty when it came to the onClick function of the buttons for add to cart and edit user. I was struggling to get the onClick to run the respective "onAddToCart" and "onEdit" functions, but I realized I was missing a curly bracket and was able to fix that fairly quickly. I also realized that I needed to use optional chaining as there was an error that kept telling me that the functions were possibly undefined.
